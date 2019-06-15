@@ -9,7 +9,7 @@ using System;
 */
 public class DamageText : MonoBehaviour 
 {
-    public GameObject[] mDamages;
+    
   
 
    
