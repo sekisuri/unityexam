@@ -19,7 +19,7 @@ public class EventTest : MonoBehaviour
         Debug.Log("EventTest Start");
 #endif
 
-        viewTap.AddListenerOnTap(OnTap);
+   //     viewTap.AddListenerOnTap(OnTap);
     }
 
     private void OnTap()

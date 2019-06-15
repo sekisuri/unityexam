@@ -10,33 +10,33 @@ using System;
 public class ViewTap : MonoBehaviour 
 {
 
-    Action onTap = () => { }; // sekisuri 2019-6-15 탭을 했을 때 이벤트 처리
+//    Action onTap = () => { }; // sekisuri 2019-6-15 탭을 했을 때 이벤트 처리
 
-    private void Start()
-    {
+//    private void Start()
+//    {
 
-#if true
-        Debug.Log("ViewTap Start");
-#endif
+//#if true
+//        Debug.Log("ViewTap Start");
+//#endif
 
-    }
+//    }
 
-    // sekisuri 2019-6-15 탭 리스너 등록
-    public void AddListenerOnTap(Action action)
-    {
-        onTap += action;
-    }
+//    // sekisuri 2019-6-15 탭 리스너 등록
+//    public void AddListenerOnTap(Action action)
+//    {
+//        onTap += action;
+//    }
 
-    // EventTriggerからTap時によばれる
-    public void OnTap()
-    {
+//    // EventTriggerからTap時によばれる
+//    public void OnTap()
+//    {
 
-#if true
-        Debug.Log("before OnTap");
-#endif
+//#if true
+//        Debug.Log("before OnTap");
+//#endif
 
-        onTap();
-    }
+//        onTap();
+//    }
 
     
     // sekisuri 2019-6-15 Start <--
