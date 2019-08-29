@@ -11,12 +11,21 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Text txt_Dialogue;
     [SerializeField] Text txt_Name;
 
+    [SerializeField] GameObject interEvent;
+    Dialogue[] dialogues;
+
     bool isDialogue = false;
 
-    public void ShowDialogue()
+    private void Start()
+    {
+        ShowDialogue(interEvent.transform.GetComponent<InteractionEvent>().GetDialogue());
+        
+    }
+    public void ShowDialogue(Dialogue[] p_dialogues)
     {
         txt_Dialogue.text = "";
         txt_Name.text = "";
+        dialogues = p_dialogues;
         SettingUI(true);
     }
 

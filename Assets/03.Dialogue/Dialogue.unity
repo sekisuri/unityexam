@@ -174,6 +174,7 @@ MonoBehaviour:
   go_DialogueNameBar: {fileID: 1664406769}
   txt_Dialogue: {fileID: 182168158}
   txt_Name: {fileID: 1914515419}
+  interEvent: {fileID: 1363377504}
 --- !u!1 &182168156
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +320,7 @@ MonoBehaviour:
   openReferences: 0
   openPrefabs: 0
   idRef:
-    _Keys: 12c785b8995b6d7993e2ecedfa959a3b89bbaf3bd085146d4f3e2d3497f3d758950247f90692274e3566c069b037c8004b5d76fa02fed1148701c2fbf59003526bb01a6fe51ae751077d0c3c43bb11759f4ceb3181c8f119b60101a4dea8985a636dd3615137e66644c801800a0d574265f8fc7a0d358078c6a19b4452f72d7a173c13f9861e527cfee83615a9aced68b7066dde5469fb497fa8197e999cdf6878d541b1b6a0e46cdfd0998d1575bb4ead194ef91a4eb57fbaffc575e63b600e069ae3e4f3267d3d43926d5f04367b5fddaaf55076ccfd0fa53421feb12b2460c738ad50f59dd36443acd086a545ed0f85dbac6ece4e7a399dd38927477cee6eb7ce97cb892a693fd6900dcafb766a15dece7c73286cd179438c4cdeeb53e238bd61ced6ad21865a716c983d41b03d2668734979ff7b464bfc1e0d1577482b2a8db9f266576b9743482102bbd494370d358db9a163a3c7421b83da8e1470e328bf9236045c5c812b0b8c30de788a766819ff1f1571753830823581db45265728c226859935c3956ec386097461ff2364da1c5ee42b7f1800384a4f639d40be77af7fdf9a0105ae7c542d5d6f9bbe9b0e73fe6040a8a8e377cb4b05fa0970193d1927e16e35bfcc46
+    _Keys: 12c785b8995b6d7993e2ecedfa959a3b89bbaf3bd085146d4f3e2d3497f3d758950247f90692274e3566c069b037c8004b5d76fa02fed1148701c2fbf59003526bb01a6fe51ae751077d0c3c43bb11759f4ceb3181c8f119b60101a4dea8985a636dd3615137e66644c801800a0d574265f8fc7a0d358078c6a19b4452f72d7a173c13f9861e527cfee83615a9aced68b7066dde5469fb497fa8197e999cdf6878d541b1b6a0e46cdfd0998d1575bb4ead194ef91a4eb57fbaffc575e63b600e069ae3e4f3267d3d43926d5f04367b5fddaaf55076ccfd0fa53421feb12b2460c738ad50f59dd36443acd086a545ed0f85dbac6ece4e7a399dd38927477cee6eb7ce97cb892a693fd6900dcafb766a15dece7c73286cd179438c4cdeeb53e238bd61ced6ad21865a716c983d41b03d2668734979ff7b464bfc1e0d1577482b2a8db9f266576b9743482102bbd494370d358db9a163a3c7421b83da8e1470e328bf9236045c5c812b0b8c30de788a766819ff1f1571753830823581db45265728c226859935c3956ec386097461ff2364da1c5ee42b7f1800384a4f639d40be77af7fdf9a0105ae7c542d5d6f9bbe9b0e73fe6040a8a8e377cb4b05fa0970193d1927e16e35bfcc4667317e0c59e76d2ba0403aa34eadf549733c1930a1198307706bab2b8f9d095c3a2e5c23492a9c2f6da92f69be5627100d0dfe054f647615bd2296686420b33f349123a7e0c397633d2a4da728d1c64d855d1852aa98e0016a47a779f3584309b0d4385368ea3c30a562427ab21e3d134fdeefd895efa86992a808ac678d1a65df1709f224a44c4b
     _Values:
     - {fileID: 761410617}
     - {fileID: 761410615}
@@ -378,6 +379,23 @@ MonoBehaviour:
     - {fileID: 1886452517}
     - {fileID: 11500000, guid: 9a1a3c9c4a65a174783bbaac9c006b5d, type: 3}
     - {fileID: 1886452519}
+    - {fileID: 1886452518}
+    - {fileID: 1886452517}
+    - {fileID: 1886452519}
+    - {fileID: 11500000, guid: 9a1a3c9c4a65a174783bbaac9c006b5d, type: 3}
+    - {fileID: 11500000, guid: 84ceaa8b6acabcb44a150a059d4efbb2, type: 3}
+    - {fileID: 1886452520}
+    - {fileID: 11500000, guid: 8a8bde2a05440664e8c363a18715ed84, type: 3}
+    - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 1363377507}
+    - {fileID: 1363377504}
+    - {fileID: 1363377506}
+    - {fileID: 21300060, guid: c1dbff5bcb29cdd4bbb8de3a29f2328c, type: 3}
+    - {fileID: 2800000, guid: c1dbff5bcb29cdd4bbb8de3a29f2328c, type: 3}
+    - {fileID: 1363377505}
+    - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 11500000, guid: 915ca41caf84f764090fb76f5c878c01, type: 3}
+    - {fileID: 1363377508}
   prefabs: []
 --- !u!114 &433650597
 MonoBehaviour:
@@ -670,6 +688,7 @@ GameObject:
   - component: {fileID: 1363377507}
   - component: {fileID: 1363377506}
   - component: {fileID: 1363377505}
+  - component: {fileID: 1363377508}
   m_Layer: 0
   m_Name: RubyHitdown
   m_TagString: Iterraction
@@ -754,6 +773,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1363377508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363377504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915ca41caf84f764090fb76f5c878c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\uBD09\uB780 \uC790\uAE30\uC18C\uAC1C"
+    line: {x: 1, y: 3}
+    dialogues:
+    - name: 
+      contexts: []
+    - name: 
+      contexts: []
+    - name: 
+      contexts: []
 --- !u!1 &1554387415
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,18 +983,6 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1886452517}
-    ActiveGameObject: {fileID: 1886452517}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
     - {fileID: 61935234}
     ActiveGameObject: {fileID: 61935234}
     GUIDsList: []
@@ -966,8 +995,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 740537816}
-    ActiveGameObject: {fileID: 740537816}
+    - {fileID: 1363377504}
+    ActiveGameObject: {fileID: 1363377504}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -978,8 +1007,20 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1363377504}
-    ActiveGameObject: {fileID: 1363377504}
+    - {fileID: 1886452517}
+    ActiveGameObject: {fileID: 1886452517}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 740537816}
+    ActiveGameObject: {fileID: 740537816}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1152,6 +1193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886452518}
   - component: {fileID: 1886452519}
+  - component: {fileID: 1886452520}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1185,6 +1227,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1a3c9c4a65a174783bbaac9c006b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1886452520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886452517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ceaa8b6acabcb44a150a059d4efbb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  csv_FileName: prologue
 --- !u!1 &1914515417
 GameObject:
   m_ObjectHideFlags: 0
