@@ -17,8 +17,11 @@ public class DialogueManager : MonoBehaviour
     bool isDialogue = false; // 대화중일 경우 true.
     bool isNext = false; // 특정 키 입력 대기.
 
-    int lineCount = 0;
-    int contextCount = 0;
+    [Header("텍스트 출력 딜레이")]
+    [SerializeField] float textDelay;
+
+    int lineCount = 0; // 대화 카운트
+    int contextCount = 0; // 대사 카운트
 
     private void Start()
     {
@@ -55,9 +58,6 @@ public class DialogueManager : MonoBehaviour
                         }
                     }
 
-#if true
-                    Debug.Log("Space ");
-#endif
 
                     
                     
@@ -90,12 +90,13 @@ public class DialogueManager : MonoBehaviour
         string t_ReplaceText = dialogues[lineCount].contexts[contextCount];
         t_ReplaceText = t_ReplaceText.Replace("`", ",");
 
-#if true
-        Debug.Log("대화 : " + t_ReplaceText);
-#endif
-
-        txt_Dialogue.text = t_ReplaceText;
+       // txt_Dialogue.text = t_ReplaceText;
         txt_Name.text = dialogues[lineCount].name;
+        for(int i = 0; i < t_ReplaceText.Length; i++)
+        {
+            txt_Dialogue.text += t_ReplaceText[i];
+            yield return new WaitForSeconds(textDelay);
+        }
         isNext = true;
         yield return null;
     }

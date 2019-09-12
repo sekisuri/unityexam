@@ -175,6 +175,7 @@ MonoBehaviour:
   txt_Dialogue: {fileID: 182168158}
   txt_Name: {fileID: 1914515419}
   interEvent: {fileID: 1363377504}
+  textDelay: 0.1
 --- !u!1 &182168156
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,8 +996,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1363377504}
-    ActiveGameObject: {fileID: 1363377504}
+    - {fileID: 1886452517}
+    ActiveGameObject: {fileID: 1886452517}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1007,8 +1008,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1886452517}
-    ActiveGameObject: {fileID: 1886452517}
+    - {fileID: 1363377504}
+    ActiveGameObject: {fileID: 1363377504}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
