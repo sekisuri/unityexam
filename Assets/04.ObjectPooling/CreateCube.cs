@@ -14,8 +14,9 @@ public class CreateCube : MonoBehaviour
     {
         while (true)
         {
-            yield return null;
+            yield return new WaitForSeconds(0.05f); 
             GameObject t_object = ObjectPoolingManager.instance.GetQueue();
+
             t_object.transform.position = Vector3.zero;
         }
     }
