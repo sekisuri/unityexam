@@ -8,6 +8,8 @@ TagManager:
   - EndLine
   - Scarecrow
   - Iterraction
+  - NpcGirl
+  - NpgBoy
   layers:
   - Default
   - TransparentFX

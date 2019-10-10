@@ -14,20 +14,19 @@ public class RpgManager : MonoBehaviour
 
     public void Action(GameObject scanObj)
     {
-        if (isAction)
-        {
-            isAction = false;
-        }
-        else
-        {
-            isAction = true;
-            scanObject = scanObj;
-            TalkText.text = "이것의 이름은 " + scanObject.name + "이라고 한다.";
-        }
-        talkPanel.SetActive(isAction);
+       
+        isAction = true;
+        scanObject = scanObj;
+        TalkText.text = "이것의 이름은 " + scanObject.name + "이라고 한다.";
+        talkPanel.SetActive(true);
 
     }
 
+    public void CloseTalk()
+    {
+        talkPanel.SetActive(false);
+
+    }
     void Talk(int id , bool isNpc)
     {
         //    string talkData = RpgTalkManger.GetTalk(id, talkIndex);
