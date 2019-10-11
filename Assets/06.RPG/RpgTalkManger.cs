@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class RpgTalkManger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Dictionary<int, string[]> talkData;
+
+    private void Awake()
     {
-        
+        talkData = new Dictionary<int, string[]>();
+        GenerateData();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void GenerateData()
     {
-        
+        talkData.Add(1000, new string[] { "안녕?", "이 곳에 처음 왔구나?" });
+        talkData.Add(2000, new string[] { "내이름은 엔피시이다 "   });
+        talkData.Add(100, new string[] { "평범한 나무상자다." });
+        talkData.Add(200, new string[] { "누군가 사용했던 흔적이 있는 책상이다." });
     }
+
+    public string GetTalk(int id, int talkIndex)
+    {
+        if (talkIndex == talkData[id].Length)
+        {
+            return null;
+        }
+        else
+        {
+            return talkData[id][talkIndex];
+        }
+    }
+
 }

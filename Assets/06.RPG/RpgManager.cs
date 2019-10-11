@@ -6,19 +6,30 @@ using UnityEngine.UI;
 public class RpgManager : MonoBehaviour
 {
 
+    public RpgTalkManger talkManager;
     public GameObject talkPanel;
     public Text TalkText;
-    public GameObject scanObject;
+    private GameObject scanObject;
     public bool isAction;
-    public int talkIndex;
+    public int talkIndex = 0;
 
     public void Action(GameObject scanObj)
     {
-       
+
+        talkPanel.SetActive(true);
+
         isAction = true;
         scanObject = scanObj;
-        TalkText.text = "이것의 이름은 " + scanObject.name + "이라고 한다.";
-        talkPanel.SetActive(true);
+        //  TalkText.text = "이것의 이름은 " + scanObject.name + "이라고 한다.";
+        ObjData objData = scanObject.GetComponent<ObjData>();
+
+#if true
+        Debug.Log("objData id : " + objData.id);
+        Debug.Log("objData isNpc : " + objData.isNpc);
+        Debug.Log("talk index : " + talkIndex);
+#endif
+
+        Talk(objData.id, objData.isNpc);
 
     }
 
@@ -29,12 +40,13 @@ public class RpgManager : MonoBehaviour
     }
     void Talk(int id , bool isNpc)
     {
-        //    string talkData = RpgTalkManger.GetTalk(id, talkIndex);
-        string talkData ="";
+        string talkData = talkManager.GetTalk(id, talkIndex);
+       
         if(talkData == null)
         {
             isAction = false;
             talkIndex = 0;
+            CloseTalk();
             return;
         }
         if (isNpc)
@@ -45,7 +57,6 @@ public class RpgManager : MonoBehaviour
         {
             TalkText.text = talkData;
         }
-        isAction = true;
         talkIndex++;
     }
 }

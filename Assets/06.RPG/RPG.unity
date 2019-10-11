@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 58424533}
   - component: {fileID: 58424532}
   - component: {fileID: 58424534}
+  - component: {fileID: 58424535}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -228,6 +229,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &58424535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58424531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5eafb850a18df42b83894a75dfb7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 100
+  isNpc: 0
 --- !u!1 &272539156
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +254,7 @@ GameObject:
   - component: {fileID: 272539158}
   - component: {fileID: 272539157}
   - component: {fileID: 272539159}
+  - component: {fileID: 272539160}
   m_Layer: 0
   m_Name: NpcGirl
   m_TagString: Untagged
@@ -336,6 +352,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9375}
   m_EdgeRadius: 0
+--- !u!114 &272539160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272539156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5eafb850a18df42b83894a75dfb7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1000
+  isNpc: 1
 --- !u!1 &402751440
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +618,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &760473593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760473595}
+  - component: {fileID: 760473594}
+  m_Layer: 0
+  m_Name: TalkManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &760473594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760473593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be56bcac4504dee4da4ed63810dfd87b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &760473595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760473593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5972309, y: -0.8645358, z: -1.6562939}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826237874
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +672,7 @@ GameObject:
   - component: {fileID: 826237876}
   - component: {fileID: 826237875}
   - component: {fileID: 826237877}
+  - component: {fileID: 826237878}
   m_Layer: 0
   m_Name: NpcBoy
   m_TagString: Untagged
@@ -696,6 +770,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.9375}
   m_EdgeRadius: 0
+--- !u!114 &826237878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826237874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5eafb850a18df42b83894a75dfb7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2000
+  isNpc: 1
 --- !u!1 &902931753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,8 +1266,20 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1057509199}
-    ActiveGameObject: {fileID: 1057509199}
+    - {fileID: 826237874}
+    ActiveGameObject: {fileID: 826237874}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 58424531}
+    ActiveGameObject: {fileID: 58424531}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1192,6 +1292,66 @@ MonoBehaviour:
     list:
     - {fileID: 402751440}
     ActiveGameObject: {fileID: 402751440}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 505437071}
+    ActiveGameObject: {fileID: 505437071}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 272539156}
+    ActiveGameObject: {fileID: 272539156}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1918034655}
+    ActiveGameObject: {fileID: 1918034655}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 760473593}
+    ActiveGameObject: {fileID: 760473593}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1057509199}
+    ActiveGameObject: {fileID: 1057509199}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1228,66 +1388,6 @@ MonoBehaviour:
     list:
     - {fileID: 1346199730}
     ActiveGameObject: {fileID: 1346199730}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1918034655}
-    ActiveGameObject: {fileID: 1918034655}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 272539156}
-    ActiveGameObject: {fileID: 272539156}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 826237874}
-    ActiveGameObject: {fileID: 826237874}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 505437071}
-    ActiveGameObject: {fileID: 505437071}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 58424531}
-    ActiveGameObject: {fileID: 58424531}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1515,9 +1615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526e373b8bb4f194badabee6d965fcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  talkManager: {fileID: 760473594}
   talkPanel: {fileID: 1057509199}
   TalkText: {fileID: 1346199732}
-  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 0
 --- !u!4 &1918034657
