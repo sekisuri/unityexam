@@ -23,6 +23,12 @@ public class RpgTalkManger : MonoBehaviour
         talkData.Add(100, new string[] { "평범한 나무상자다." });
         talkData.Add(200, new string[] { "누군가 사용했던 흔적이 있는 책상이다." });
 
+        talkData.Add(1010, new string[] {
+            "어서 와:0",
+            "이 곳에 처음 왔구나?:1",
+            "오른쪽 호수 쪽에 루도가 알려줄꺼야.:0"});
+
+
         portraitData.Add(1000 + 0, portraitArray[0]);
         portraitData.Add(1000 + 1, portraitArray[1]);
         portraitData.Add(1000 + 2, portraitArray[2]);
@@ -36,15 +42,21 @@ public class RpgTalkManger : MonoBehaviour
 
     }
 
-    public string GetTalk(int id, int talkIndex)
+    public string GetTalk(int id, int talkid)
     {
-        if (talkIndex == talkData[id].Length)
+
+#if true
+        Debug.Log("GetTalk id : " + id);
+        Debug.Log("GetTalk talkid : " + talkid);
+#endif
+
+        if (talkid == talkData[id].Length)
         {
             return null;
         }
         else
         {
-            return talkData[id][talkIndex];
+            return talkData[id][talkid];
         }
     }
 

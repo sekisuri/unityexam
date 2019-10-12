@@ -7,12 +7,14 @@ public class RpgManager : MonoBehaviour
 {
 
     public RpgTalkManger talkManager;
+    public QuestManager questManager;
+
     public GameObject talkPanel;
     public Image portraitImg;
     public Text TalkText;
     private GameObject scanObject;
     public bool isAction;
-    public int talkIndex = 0;
+    private int talkIndex = 0;
 
     public void Action(GameObject scanObj)
     {
@@ -27,7 +29,7 @@ public class RpgManager : MonoBehaviour
 #if true
         Debug.Log("objData id : " + objData.id);
         Debug.Log("objData isNpc : " + objData.isNpc);
-        Debug.Log("talk index : " + talkIndex);
+        Debug.Log("talkIndex : " + talkIndex);
 #endif
 
         Talk(objData.id, objData.isNpc);
@@ -42,9 +44,20 @@ public class RpgManager : MonoBehaviour
     }
     void Talk(int id , bool isNpc)
     {
-        string talkData = talkManager.GetTalk(id, talkIndex);
-       
-        if(talkData == null)
+        int questTalkIndex = questManager.GetQuestTalkIndex(id);
+
+#if true
+        Debug.Log("talk id : " + id);
+        Debug.Log("Index : " + questTalkIndex);
+        Debug.Log("talk index : " + talkIndex);
+#endif
+        questTalkIndex += id;
+        string talkData = talkManager.GetTalk(questTalkIndex, talkIndex);
+        //string talkData = talkManager.GetTalk(id , talkIndex);
+
+
+
+        if (talkData == null)
         {
             isAction = false;
             talkIndex = 0;
