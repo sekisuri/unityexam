@@ -8,6 +8,7 @@ public class RpgManager : MonoBehaviour
 
     public RpgTalkManger talkManager;
     public GameObject talkPanel;
+    public Image portraitImg;
     public Text TalkText;
     private GameObject scanObject;
     public bool isAction;
@@ -35,6 +36,7 @@ public class RpgManager : MonoBehaviour
 
     public void CloseTalk()
     {
+        
         talkPanel.SetActive(false);
 
     }
@@ -51,11 +53,14 @@ public class RpgManager : MonoBehaviour
         }
         if (isNpc)
         {
-            TalkText.text = talkData;
+            TalkText.text = talkData.Split(':')[0];
+            portraitImg.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
+            portraitImg.color = new Color(1, 1, 1, 1);
         }
         else
         {
             TalkText.text = talkData;
+            portraitImg.color = new Color(0, 0, 0, 0);
         }
         talkIndex++;
     }
