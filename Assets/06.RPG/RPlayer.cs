@@ -33,7 +33,7 @@ public class RPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-#if true
+#if false
         Debug.Log(collision.gameObject.name + "와 접촉하다");
 #endif 
         if(collision.gameObject.tag == "EndLine")

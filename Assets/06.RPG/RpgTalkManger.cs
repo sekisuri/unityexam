@@ -27,6 +27,10 @@ public class RpgTalkManger : MonoBehaviour
             "어서 와:0",
             "이 곳에 처음 왔구나?:1",
             "오른쪽 호수 쪽에 루도가 알려줄꺼야.:0"});
+        talkData.Add(2010, new string[] {
+            "여어:0",
+            "이 호수의 전설을 들으러 온거야?:1",
+            "그럼 일 좀 하나 해주면 좋을텐데...:0"});
 
 
         portraitData.Add(1000 + 0, portraitArray[0]);
@@ -45,7 +49,7 @@ public class RpgTalkManger : MonoBehaviour
     public string GetTalk(int id, int talkid)
     {
 
-#if true
+#if false
         Debug.Log("GetTalk id : " + id);
         Debug.Log("GetTalk talkid : " + talkid);
 #endif
